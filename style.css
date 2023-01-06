@@ -1,10 +1,11 @@
 /* ------------------------------------------*/
 /* General */
 
-header, section, footer {
-    margin-left: 39px;
-    font-family: raleway;
+body {
     max-width: 1400px;
+    box-sizing: border-box;
+    padding-left: 39px;
+    font-family: raleway;
 }
 
 h1 {
@@ -57,7 +58,6 @@ a {
 /* Section Header */
 
 header {
-    width: 1322px;
     height: 126px;
     display: flex;
     flex-direction: row;
@@ -168,17 +168,18 @@ header {
 /* Section Filtres */
 
 .filtres {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 920px;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 914px;
 }
 
 .filtres_flex {
     display: flex;
     flex-direction: row;
-    column-gap: 40px;
+    justify-content: space-between;
+    width: 90%;
 }
 
 .filtres_flex_unique {
@@ -243,40 +244,28 @@ header {
 /* Section Hébergements */
 
 .hebergement {
+    height: 626px;
     display: flex;
     flex-direction: row;
-    width: 1340px;
-    height: 626px;
     justify-content: space-between;
-    
 }
 
 .hebergement_a_marseille {
     width: 65.67%;
     background-color: #F2F2F2;
-    box-sizing: border-box;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 42px;
-    padding-bottom: 46px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    row-gap: 23px;
+    justify-content: center;
+    align-items: center;
 }
 
 .les_plus_populaires {
     width: 31.34%;
     background-color: #F2F2F2;
-    box-sizing: border-box;
-    padding-left: 37px;
-    padding-right: 40px;
-    padding-top: 42px;
-    padding-bottom: 34px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    row-gap: 26px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -284,21 +273,39 @@ header {
 /* Section Hébergements/Hébergements à marseille */
 
 .hebergement_a_marseille_flex {
+    height: 85.94%;
+    width: 90.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.hebergement_a_marseille_titre {
+    height: 4.83%;
+}
+
+.hebergement_a_marseille_flex_cartes {
+    height: 82.7%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    row-gap: 30px;
+    row-gap: 7%;
+    column-gap: 3.875%;
     flex-wrap: wrap;
-    padding-bottom: 17px;
 }
+
 .hebergement_marseille_cartes {
-    height: 199px;
-    width: 246px;
-    border-radius: 20px;
+    width: 30.7%;
     background-color: white;
-    box-shadow: 5px 5px 5px rgb(151, 151, 151);
     box-sizing: border-box;
-    border: solid 5px white;
+    padding: 0.5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(151, 151, 151);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    flex-basis: auto;
+    flex-grow: 1;
 }
 
 .hebergement_marseille_cartes_image {
@@ -307,21 +314,35 @@ header {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding-bottom: 4px;
 }
 
 .hebergement_marseille_cartes_conteneur {
-    height: 70px;
-    padding-left: 11px;
+    padding-left: 6.5%;
+    padding-bottom: 3%;
     display: flex;
     flex-direction: column;
-    row-gap: 6px;
+    justify-content: space-between;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+.hebergement_a_marseille_titre {
+    height: 3.90%;
 }
 
 
 
 /* ------------------------------------------*/
 /* Section Hébergements/Les plus populaires */
+
+.les_plus_populaires_flex {
+    height: 87.86%;
+    width: 81.67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
 
 .les_plus_populaires_titre {
     display: flex;
@@ -331,41 +352,30 @@ header {
 }
 
 .les_plus_populaires_cartes {
-    height: 144px;
-    width: 343px;
+    width: 100%;
     background-color: white;
+    box-sizing: border-box;
+    padding: 1.25%;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgb(151, 151, 151);
-    box-sizing: border-box;
-    padding: 5px 22px 5px 5px;
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
-    margin-bottom: 7px;
+    column-gap: 4.37%;
 }
 
 .les_plus_populaires_cartes_image {
     height: 134px;
-    max-width: 132px;
+    width: 39.94%;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
 .les_plus_populaires_cartes_conteneur {
+    width: 54%;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    padding-bottom: 7px;
     justify-content: space-between;
-}
-
-.les_plus_populaires_cartes_conteneur_titre {
-    display: flex;
-    flex-direction: column;
-    row-gap: 7px;
-    box-sizing: border-box;
-    padding-top: 11px;
 }
 
 
