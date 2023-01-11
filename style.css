@@ -4,7 +4,9 @@
 body {
     max-width: 1400px;
     box-sizing: border-box;
-    padding-left: 39px;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 0;
     font-family: raleway;
 }
 
@@ -244,24 +246,24 @@ header {
 /* Section Hébergements */
 
 .hebergement {
-    height: 626px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 4.48%;
+    column-gap: 3.5%;
+    margin-bottom: 60px;
 }
 
-.hebergement_a_marseille {
-    width: 65.67%;
+.hebergement_marseille {
+    width: 64%;
     background-color: #F2F2F2;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    padding-top: 42px;
+    padding-bottom: 46px;
 }
 
 .les_plus_populaires {
-    width: 31.34%;
     background-color: #F2F2F2;
     border-radius: 20px;
     display: flex;
@@ -273,40 +275,31 @@ header {
 /* ------------------------------------------*/
 /* Section Hébergements/Hébergements à marseille */
 
-.hebergement_a_marseille_flex {
-    height: 85.94%;
-    width: 90.9%;
+.hebergement_marseille_flex {
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
+    row-gap: 23px;
+
 }
 
-.hebergement_a_marseille_titre {
-    height: 4.83%;
-}
-
-.hebergement_a_marseille_flex_cartes {
-    height: 82.7%;
+.hebergement_marseille_flex_cartes {
     display: flex;
     flex-direction: row;
-    row-gap: 7%;
-    column-gap: 3.875%;
+    column-gap: 3%;
+    row-gap: 30px;
     flex-wrap: wrap;
 }
 
 .hebergement_marseille_cartes {
-    width: 30.7%;
+    width: 30%;
     background-color: white;
-    box-sizing: border-box;
-    padding: 0.5%;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(151, 151, 151);
     display: flex;
     flex-direction: column;
-    row-gap: 5%;
-    flex-basis: auto;
-    flex-grow: 1;
+    row-gap: 5px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0.5%;
 }
 
 .hebergement_marseille_cartes_image {
@@ -318,20 +311,20 @@ header {
 }
 
 .hebergement_marseille_cartes_conteneur {
-    padding-left: 6.5%;
-    padding-bottom: 3%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: auto;
+    justify-content: center;
+    align-items: center;
     flex-grow: 1;
 }
 
-.hebergement_a_marseille_titre {
-    height: 3.90%;
+.hebergement_marseille_cartes_conteneur_detail {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 5px;
 }
-
-
 
 /* ------------------------------------------*/
 /* Section Hébergements/Les plus populaires */
@@ -455,4 +448,39 @@ footer {
     list-style: none;
     padding: 0;
     line-height: 175%;
+}
+
+
+
+/* ------------------------------------------*/
+/* Section media_queries_1024 */
+
+@media screen and (max-width: 1024px) and (min-width: 375px) {
+    body {
+        box-sizing: border-box;
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+    
+    .hebergement {
+        height: 957px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5.53%;
+        padding-bottom: 0;
+    }
+
+    .hebergement_a_marseille {
+        width: 100%;
+    }
+
+    .les_plus_populaires {
+        width: 100%;
+    }
+
+    .les_plus_populaires_cartes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
 }
