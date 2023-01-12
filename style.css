@@ -4,8 +4,8 @@
 body {
     max-width: 1400px;
     box-sizing: border-box;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
     margin: 0;
     font-family: raleway;
 }
@@ -45,10 +45,12 @@ a {
 
 .i_bleu {
     color: #0065FC;
+    font-size: 12px;
 }
 
 .i_beige {
     color: #D9D9D9;
+    font-size: 12px;
 }
 
 .margin_0 {
@@ -170,30 +172,31 @@ header {
 /* Section Filtres */
 
 .filtres {
+    width: 66%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 914px;
 }
 
 .filtres_flex {
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
 }
 
 .filtres_flex_unique {
-    display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
-    height: 50px;
+    height: 45px;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
     white-space: nowrap;
 }
 
@@ -204,6 +207,11 @@ header {
 
 .filtres_flex_unique:hover {
     background-color: #DEEBFF;
+}
+
+.i_filtres {
+    color: #0065FC;
+    font-size: 22px;
 }
 
 
@@ -289,7 +297,7 @@ header {
 .hebergement_marseille_flex_cartes {
     display: flex;
     flex-direction: row;
-    column-gap: 5%;
+    justify-content: space-between;
     row-gap: 30px;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -306,8 +314,7 @@ header {
     border-radius: 20px;
     box-sizing: border-box;
     padding: 0.5%;
-    max-width: 30%;
-    flex-grow: 1;
+    width: 31%;
 }
 
 .hebergement_marseille_cartes_image {
@@ -408,10 +415,10 @@ header {
 /* Section Activités à Marseille */
 
 .activites_a_marseille {
-    height: 554px;
+    margin-bottom: 61px;
     display: flex;
     flex-direction: column;
-    row-gap: 3.4%;
+    row-gap: 18.47px;
 }    
 
 .activites_a_marseille_flex {
@@ -419,7 +426,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     column-gap: 3.2%;
-    height: 80.14%;
 }
 
 .activites_a_marseille_cartes {
@@ -433,7 +439,7 @@ header {
 }
 
 .activites_a_marseille_cartes_image {
-    height: 87.6%;
+    height: 389px;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -441,11 +447,11 @@ header {
 }
 
 .activites_a_marseille_cartes_titre {
-    height: 12.4%;
     display: flex;
-    align-items: center;
-    column-gap: 6.3%;
     justify-content: space-around;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 21px;
 }
 
 .activites_a_marseille_cartes_titre_detail {
@@ -459,8 +465,9 @@ header {
 footer {
     height: 225px;
     background-color: #F2F2F2;
-    padding-top: 3.35%;
-    padding-left: 5.22%;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-left: 4.86%;
 }
 
 .footer_flex {
@@ -485,32 +492,84 @@ footer {
 /* ------------------------------------------*/
 /* Section media_queries_1024 */
 
-@media screen and (max-width: 1024px) and (min-width: 375px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
     body {
         box-sizing: border-box;
-        padding-left: 72px;
-        padding-right: 72px;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .menu_hover:hover {
+        border: none;
+    }
+
+    .filtres {
+        width: 95%;
+    }
+
+    .filtres_flex {
+        flex-wrap: wrap;
     }
     
     .hebergement {
-        height: 957px;
         display: flex;
         flex-direction: column;
-        row-gap: 5.53%;
-        padding-bottom: 0;
+        row-gap: 53px;
     }
 
-    .hebergement_a_marseille {
+    .hebergement_marseille {
         width: 100%;
     }
 
     .les_plus_populaires {
-        width: 100%;
+        box-sizing: border-box;
+        padding-top: 34px;
+        padding-bottom: 48px;
+    }
+
+    .les_plus_populaires_flex {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .les_plus_populaires_flex_cartes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .les_plus_populaires_cartes {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        width: 31%;
+        padding: 0.5%;
     }
+
+    .les_plus_populaires_cartes_conteneur_titre {
+        width: 98%;
+    }
+
+    .font_13_media_tablette {
+        font-size: 13px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .activites_a_marseille {
+        row-gap: 34px;
+    }
+
+    .activites_a_marseille_flex {
+        column-gap: 5%;
+    }
+
+    .activites_a_marseille_cartes_image {
+        height: 211px;
+    }
+
+    .activites_a_marseille_cartes_titre {
+        box-sizing: border-box;
+        padding-top: 9px;
+        padding-bottom: 7px;
+    }   
 }
