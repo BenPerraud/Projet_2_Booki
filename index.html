@@ -13,28 +13,29 @@
 
         <header> <!--Section Header-->
             <img class="logo" src="/Images+Booki/Images_Booki/logo/Booki@3x.png" alt="logo Booki">
-            <nav>
-                <ul class="menu">
-                    <li class="menu_hover"><a href="#hebergement">Hébergements</a></li>
-                    <li class="menu_hover"><a href="#activites">Activités</a></li>
-                </ul>
+            <nav class="menu">
+                <a class="menu_hover" href="#hebergement">Hébergements</a>
+                <a class="menu_hover" href="#activites">Activités</a>
             </nav>
         </header>
 
-        <section> <!--Section Filtres & Information-->
-            <H1 class="information_h1">Trouvez votre hébergement pour des vacances de rêves</H1>
-            <p class="information_p">En plein centre-ville ou en pleine nature</p>
+        <section class="filtres_information"> <!--Section Filtres & Information-->
+            <H1 class="filtres_information_h1 margin_0">Trouvez votre hébergement pour des vacances de rêves</H1>
+            <p class="filtres_information_p margin_0">En plein centre-ville ou en pleine nature</p>
             <form action="https://www.google.com/" method="get" target="_blank">
                 <div class="formulaire">
-                    <label class="formulaire_position" for="recherche">
+                    <label class="formulaire_icone" for="recherche">
                         <i class="fa-solid fa-location-dot"></i>
                     </label>
-                    <input type="text" placeholder="Marseille" id="recherche" name="user_recherche" class="formulaire_texte">
-                    <button type="submit" class="formulaire_bouton_texte">Rechercher</button>
+                    <input  class="formulaire_input" type="text" placeholder="Marseille" id="recherche" name="user_recherche">
+                    <button class="formulaire_bouton" type="submit">Rechercher</button>
+                    <button class="formulaire_bouton_mobile" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </form>
             <div class="filtres"> <!--Section Filtres-->
-                <h2>Filtres</h2>
+                <h2 class="margin_0 filtres_h2">Filtres</h2>
                 <div class="filtres_flex">
                     <div class="filtres_flex_unique">
                         <i class="fa-solid fa-money-bill-wave i_filtres"></i>
@@ -42,7 +43,7 @@
                     </div>
                     <div class="filtres_flex_unique">
                         <i class="fa-sharp fa-solid fa-person i_filtres"></i>
-                        <p class="filtres_font">Famille</p>
+                        <p class="filtres_font">Familial</p>
                     </div>
                     <div class="filtres_flex_unique">
                         <i class="fa-solid fa-heart i_filtres"></i>
@@ -54,11 +55,9 @@
                     </div>
                 </div>
             </div>
-            <div class="information_flex"> <!--Section Information-->
-                <span class="information_icone">
-                    <i class="fa-solid fa-info"></i>
-                </span>
-                <p class="information_flex_p">Plus de 500 logements sont disponibles dans cette ville</p>
+            <div class="information"> <!--Section Information-->
+                <i class="fa-solid fa-info information_icone"></i>
+                <p class="information_p margin_0">Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
         </section>
 
@@ -176,7 +175,7 @@
                             </div>    
                         </a>
                     </div>       
-                    <h2 class="margin_0 hebergement_a_marseille_titre">Afficher plus</h2>
+                    <h2 class="margin_0 hebergement_a_marseille_titre display_none">Afficher plus</h2>
                 </div>      
             </div>    
             <div class="les_plus_populaires"> <!--Section Hébergements/Les plus populaires-->

@@ -62,43 +62,38 @@ a {
 /* Section Header */
 
 header {
-    height: 126px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 60px;
 }
 
 .logo {
     height: 19px;
-    width: auto;
-    padding-top: 48px;
-    padding-bottom: 59px;
 }
 
 .menu {
+    width: 25%;
+    font-size: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    column-gap: 17px;
 }
 
 .menu_hover {
-    padding-left: 25px;
-    padding-right: 25px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    padding-top: 48px;
-    padding-bottom: 59px;
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 46px;
+    border-top: 2px solid white;
 }
 
 .menu_hover:hover {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
+    box-sizing: border-box;
+    padding-top: 46px;
+    border-top: #0065FC 2px solid;
 }
 
 
@@ -106,65 +101,65 @@ header {
 /* ------------------------------------------*/
 /* Section Filtres & Information */
 
-.information_h1 {
-    margin-top: 0;
-    margin-bottom: 0;
+.filtres_information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.information_p {
-    margin-top: 8px;
-    margin-bottom: 21px;
+.filtres_information_h1 {
+    margin-bottom: 8px;
+}
+
+.filtres_information_p {
+    margin-bottom: 20px;
 }
 
 .formulaire {
+    width: 35%;
+    height: 49px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    padding-bottom: 32px;
-    width: 332px;
+    margin-bottom: 32px;
 }
 
-.formulaire_position {
-    height: 49px;
-    background-color: #D9D9D9;
-    border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
+.formulaire_icone {
+    width: 15%;
+    height: 100%;
+    background-color: #F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.fa-location-dot {
-    color: black;
-    padding-left: 18px;
-    padding-top: 16px;
-    padding-right: 18px;
-    padding-bottom: 16px;
-    font-size: 18px;
-}
-
-.formulaire_texte {
-    border-top: 1px solid #F2F2F2;
-    border-bottom: 1px solid #F2F2F2;
-    border-left: none;
-    border-right: none;
-    height: 46.5px;
-    padding: 0;
+.formulaire_input {
+    width: 48%;
+    height: 100%;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    padding-left: 17px;
+    border: none;
+    box-sizing: border-box;
+    border-top: 2px #F2F2F2 solid;
+    border-bottom: 2px #F2F2F2 solid;
+    padding-left: 5%;
 }
 
-.formulaire_bouton_texte {
+.formulaire_bouton {
+    width: 37%;
+    height: 100%;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     color: white;
+    text-align: center;
     background-color: #0065FC;
-    height: 49px;
-    border: 1px solid #0065FC;
-    border-radius: 0px 15px 15px 0px;
-    padding-top: 0;
-    padding-bottom: 0;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 
@@ -219,33 +214,30 @@ header {
 /* ------------------------------------------*/
 /* Section Information */
 
-.information_flex {
+.information {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    column-gap: 11px;
+    column-gap: 1%;
+    margin-bottom: 37px;
+    margin-top: 35px;
 }
 
 .information_icone {
-    height: 24px;
-    width: 24px;
-    border: 1px solid #D9D9D9;
-    border-radius: 50%;  
-}
-
-.fa-info {
-    font-size: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 7px;
-    padding-top: 7px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #0065FC;
+    font-size: 10px;
+    box-sizing: border-box;
+    border: 1px solid #F2F2F2;
+    border-radius: 50%;
 }
 
-.information_flex_p {
-    margin: 0;
-    margin-top: 38px;
-    margin-bottom: 39px;
+.information_p {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -463,10 +455,10 @@ header {
 /* Section footer */
 
 footer {
-    height: 225px;
     background-color: #F2F2F2;
     box-sizing: border-box;
     padding-top: 45px;
+    padding-bottom: 58px;
     padding-left: 4.86%;
 }
 
@@ -492,7 +484,13 @@ footer {
 /* ------------------------------------------*/
 /* Section media_queries_1024 */
 
-@media screen and (max-width: 992px) and (min-width: 768px) {
+@media screen and (min-width : 769px) {
+    .formulaire_bouton_mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
     body {
         box-sizing: border-box;
         padding-left: 7%;
@@ -500,7 +498,12 @@ footer {
     }
 
     .menu_hover:hover {
-        border: none;
+        border-top: 2px solid white;
+        color: black;
+    }
+
+    .formulaire {
+        width: 45%;
     }
 
     .filtres {
@@ -572,4 +575,177 @@ footer {
         padding-top: 9px;
         padding-bottom: 7px;
     }   
+}
+
+@media screen and (max-width : 768px) {
+    body {
+        padding: 0;
+    }
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 31px;
+    }
+
+    .logo {
+        margin-top: 19px;
+        padding: 0;
+        padding-bottom: 39px;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu_hover {
+        width: 50%;
+        padding: 0;
+        border-top: none;
+        text-align: center;
+        box-sizing: border-box;
+        padding-bottom: 23px;
+        border-bottom: #D9D9D9 3px solid;
+    }
+
+    .menu_hover:hover {
+        padding: 0;
+        border-top: none;
+        box-sizing: border-box;
+        padding-bottom: 23px;
+        border-bottom: #0065FC 3px solid;
+    }
+
+    .filtres_information {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .formulaire {
+        width: 100%;
+    }
+
+    .formulaire_bouton {
+        display: none;
+    }
+
+    .formulaire_bouton_mobile {
+        width: 37%;
+        height: 100%;
+        color: white;
+        text-align: center;
+        background-color: #0065FC;
+        border: none;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-size: 16px;
+    }
+
+    .filtres {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: flex-start;
+    }
+
+    .filtres_flex {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 17px;
+    }
+
+    .filtres_flex_unique {
+        width: 40%;
+        justify-content: flex-start;
+    }
+
+    .i_filtres {
+        font-size: 15px;
+    }
+
+    .filtres_font {
+        font-size: 11px;
+    }
+
+    .information {
+        display: flex;
+        align-items: center;
+        column-gap: 3%;
+    }
+
+    .hebergement {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0px;
+    }
+
+    .hebergement_marseille {
+        order: 2; 
+    }
+
+
+    .les_plus_populaires_flex {
+        width: 90%;
+        row-gap: 26px;
+    }
+
+    .les_plus_populaires_flex_cartes {
+        row-gap: 11px;
+    }
+
+    .hebergement_marseille {
+        width: 100%;
+        background-color: white;
+        padding-top: 26px;
+        padding-bottom: 0;
+        row-gap: 19px;
+    }
+
+    .hebergement_marseille_flex_cartes {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .hebergement_marseille_cartes {
+        width: 100%;
+        box-shadow: 2px 2px 2px #F2F2F2;
+    }
+
+    .display_none {
+        display: none;
+    }
+
+    .activites_a_marseille {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .activites_a_marseille_flex {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .activites_a_marseille_cartes_image {
+        height: 134px;
+    }
+
+    .footer_flex {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .footer_flex_colonnes {
+        width: 100%;
+    }
+    
 }
