@@ -1,4 +1,0 @@
-Ordre du jour
-
-Gestion de la dimension des images dans les grid
-
